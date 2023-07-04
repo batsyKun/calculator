@@ -1,0 +1,75 @@
+body{
+    background-color: black;
+}
+.display {
+    width: 600px;
+    height: 200px;
+}
+
+.calculator {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#calBtn {
+    display: grid;
+    gap: 10px;
+    grid-template-columns:repeat(3, 90px);
+    grid-template-rows:repeat(5, 90px);
+
+
+}
+
+#calBtn > button {
+    background-color: rgb(50, 50, 50);
+}
+.calc{
+    display: flex;
+    gap: 10px;
+}
+
+
+
+ #btnZero {
+    grid-area: 5 / 1 / 5 / span 2;
+ }
+
+ .sideBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+ }
+
+ .sideBtn > div >button {
+    width: 90px;
+    height: 90px;
+    background-color: rgb(4, 97, 178);
+    font-size: 50px;
+ }
+ #btnPlus {
+    flex: 1 0 90px;
+ }
+ #btnEql {
+    flex: 1 0 90px;
+
+ }
+ .sideBtnChild1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+ .sideBtnChild2{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1 0 100px;
+ }
+ button {
+    border-radius: 20px;
+    border: 0;
+    font-size: 30px;
+    color: rgb(7, 137, 243);
+    font-weight: 500;
+ }

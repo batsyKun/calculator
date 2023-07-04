@@ -8,6 +8,38 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="calculator">
+        <div class="display"></div>
+        <div></div>
+        <div class="calc">
+            <div id="calBtn">
+                <button class="btn" style="background-color: gray; color: rgb(220, 220, 220);" data-clrAll>AC</button>
+                <button class="btn" style="background-color: gray; color:rgb(220, 220, 220)" data-clr>DEL</button>
+                <button class="btn" style="background-color: rgb(4, 97, 178);" data-op>/</button>
+                <button class="btn" data-num>7</button>
+                <button class="btn" data-num>8</button>
+                <button class="btn" data-num>9</button>
+                <button class="btn" data-num>4</button>
+                <button class="btn" data-num>5</button>
+                <button class="btn" data-num>6</button>
+                <button class="btn" data-num>1</button>
+                <button class="btn" data-num>2</button>
+                <button class="btn" data-num>3</button>
+                <button class="btn" id="btnZero"  data-num>0</button>
+                <button class="btn" style="font-size: 50px; padding-bottom: 20px;" data-period>.</button>
+            </div>
+            <div class="sideBtn">
+                <div class="sideBtnChild1">
+                    <button class="btn" style="padding-top: 15px;" data-op>*</button>
+                    <button class="btn" data-op>-</button>
+                </div>
+                <div class="sideBtnChild2">
+                    <button class="btn span-2-5" id="btnPlus" data-op>+</button>
+                    <button class="btn" id="btnEql" data-op>=</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
 </body>
 </html>
