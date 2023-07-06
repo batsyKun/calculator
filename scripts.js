@@ -4,12 +4,22 @@ const period = document.getElementById("period");
 const display = document.getElementById("display");
 const operator = document.querySelectorAll("[data-op]");
 const displayMini = document.getElementById("miniDisplay");
+const clrAll = document.getElementById("clrAll");
+const clr = document.getElementById("clr");
+
+
 
 
 period.addEventListener("click", () => addPeriod());
-
+clr.addEventListener("click", () => display.textContent = display.textContent.slice(0, -1));
 numBtn.forEach((button) => button.addEventListener("click", () => addNum(button.textContent)));
 operator.forEach((button) => button.addEventListener("click", () => miniDisplayFn(button.textContent)));
+clrAll.addEventListener("click", ()=> {
+    display.textContent = "" ;
+    displayMini.textContent = "";
+})
+
+
 let num;
 let operands;
 let operators;
@@ -47,8 +57,7 @@ function miniDisplayFn(operator) {
             }
         else{
             displayMini.textContent = sum;
-        }        }
-     
+        }        } 
 }
 let lastItem = ""
 function addNum(num) {
@@ -57,6 +66,7 @@ function addNum(num) {
         displayContent = "0" + display.textContent;
         display.textContent = displayContent
     }
+    
     if(num == "*" || num == "+" || num == "/" || num == "-"){
         if (displayContent.endsWith('*') || displayContent.endsWith('/') || displayContent.endsWith('+') || displayContent.endsWith('-')) {
             displayContent = displayContent.slice(0, -1);
@@ -66,7 +76,7 @@ function addNum(num) {
     display.append(num);
 }
 function addPeriod() {
-    const numbers = display.textContent.split("+");
+    const numbers = display.textContent.split(/[-+*/]/);
     const lastNumber = numbers[numbers.length - 1];
     if(!lastNumber.includes(".")){
         display.append(".")
