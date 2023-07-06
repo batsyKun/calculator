@@ -29,19 +29,16 @@ function miniDisplayFn(operator) {
         let displayContent1 = display.textContent;
         if (displayContent1.endsWith('*') || displayContent1.endsWith('/') || displayContent1.endsWith('+') || displayContent1.endsWith('-')) {    
             displayContent1 = displayContent1.slice(0, -1);
-            console.log(displayContent1)
             display.textContent = displayContent1;}
             num = display.textContent;
             operands = num.split(/[-+*/]/);
             operators = num.match(/[-+*/]/g);
             let sum = parseFloat(operands[0]);
             for(let i = 0; i < operators.length; i++){
-                console.log(operands[i+1]);
                 let currentOperand = parseFloat(operands[i+1]);
                 let currentOperator = operators[i]
                 if (currentOperator === "+") {
                     sum += currentOperand;
-                    console.log(sum)
                 } else if (currentOperator === "-") {
                     sum -= currentOperand;
                 } else if (currentOperator === "*") {
